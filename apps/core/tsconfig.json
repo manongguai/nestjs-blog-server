@@ -1,0 +1,10 @@
+{
+  "extends": "@kirkw/server-tsconfig/base.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "types": ["jest"]
+  },
+  "include": ["src/**/*", "**/*.spec.ts"],
+  "exclude": ["node_modules"]
+}

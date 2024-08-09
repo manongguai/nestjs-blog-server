@@ -1,0 +1,21 @@
+{
+  "name": "@kirkw/server-utils",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vue/shared": "^3.4.31",
+    "seemly": "^0.3.6",
+    "stacktrace-js": "^2.0.2",
+    "type-fest": "^4.21.0",
+    "uppercamelcase": "^3.0.0",
+    "vue": "3.3.2"
+  },
+  "devDependencies": {
+    "@kirkw/server-tsconfig": "workspace:*"
+  }
+}

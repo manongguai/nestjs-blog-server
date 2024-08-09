@@ -260,6 +260,12 @@ importers:
         specifier: ^4.7.4
         version: 4.9.5
 
+  packages/test:
+    dependencies:
+      '@kirkw/server-utils':
+        specifier: workspace:*
+        version: link:../utils
+
   packages/tsconfig: {}
 
   packages/utils:
@@ -270,6 +276,9 @@ importers:
       seemly:
         specifier: ^0.3.6
         version: 0.3.8
+      stacktrace-js:
+        specifier: ^2.0.2
+        version: 2.0.2
       type-fest:
         specifier: ^4.21.0
         version: 4.24.0

@@ -24,13 +24,11 @@
       "dependsOn": []
     },
     "dev": {
-      "cache": false,
       "dependsOn": ["@kirkw/server#start:dev"],
       "persistent": true
     },
     "build": {
-      "dependsOn": ["@kirkw/server#build"],
-      "outputs": ["dist/**"]
+      "dependsOn": ["@kirkw/server#build"]
     }
   }
 }

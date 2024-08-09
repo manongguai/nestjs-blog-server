@@ -8,7 +8,7 @@ import {
 } from '@nestjs/common';
 import { Request, Response } from 'express';
 import { WINSTON_MODULE_PROVIDER } from 'nest-winston';
-import { winstonLoggerService } from 'src/winstonLogger/winstonLogger.service';
+import { winstonLoggerService } from '@/winstonLogger/winstonLogger.service';
 @Catch(HttpException)
 export class HttpExceptionFilter implements ExceptionFilter {
   constructor(private readonly logger: winstonLoggerService) {}

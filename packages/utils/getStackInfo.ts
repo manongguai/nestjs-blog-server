@@ -1,5 +1,5 @@
 import * as StackTrace from "stacktrace-js";
-import * as Path from "path";
+import path from "path";
 
 export function getStackTrace(deep = 2): string {
   const stackList: StackTrace.StackFrame[] = StackTrace.getSync();
@@ -7,6 +7,6 @@ export function getStackTrace(deep = 2): string {
   const lineNumber: number = stackInfo.lineNumber;
   const columnNumber: number = stackInfo.columnNumber;
   const fileName: string = stackInfo.fileName;
-  const basename: string = Path.basename(fileName);
+  const basename: string = path.basename(fileName);
   return `${basename}(line: ${lineNumber}, column: ${columnNumber}): \n`;
 }

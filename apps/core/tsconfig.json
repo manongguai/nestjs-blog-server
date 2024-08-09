@@ -3,7 +3,10 @@
   "compilerOptions": {
     "outDir": "./dist",
     "baseUrl": "./",
-    "types": ["jest"]
+    "types": ["jest"],
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "include": ["src/**/*", "**/*.spec.ts"],
   "exclude": ["node_modules"]

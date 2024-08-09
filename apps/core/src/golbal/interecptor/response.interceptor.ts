@@ -1,7 +1,7 @@
 import { Injectable, NestInterceptor, CallHandler } from '@nestjs/common';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { winstonLoggerService } from 'src/winstonLogger/winstonLogger.service';
+import { winstonLoggerService } from '@/winstonLogger/winstonLogger.service';
 
 interface data<T> {
   data: T;

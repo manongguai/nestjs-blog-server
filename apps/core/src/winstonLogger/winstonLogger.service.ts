@@ -1,6 +1,6 @@
 import { Injectable, Inject } from '@nestjs/common';
 import * as winston from 'winston';
-import { getStackTrace } from '@kirkw/server-utils/getStackInfo';
+import { getStackTrace } from '@kirkw/server-utils';
 import winstonConfig from '../config/winston.config';
 
 const logger = winston.createLogger(winstonConfig);

@@ -16,7 +16,8 @@
     "changeset:version": "changeset version",
     "changeset:publish": "changeset publish",
     "dev": "dotenv -e .env -e .env.development -- turbo dev",
-    "build": "dotenv -e .env -e .env.production -- turbo build"
+    "build": "dotenv -e .env -e .env.production -- turbo build",
+    "start": "dotenv -e .env -e .env.production -- turbo start"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.5",

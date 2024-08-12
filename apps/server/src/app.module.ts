@@ -19,18 +19,10 @@ import { APP_FILTER, APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
 import { HttpExceptionFilter } from './golbal/exception/exception.filter';
 import { ValidationPipe } from './golbal/pipes/validation.pipe';
 import { ResponseInterceptor } from './golbal/interecptor/response.interceptor';
+import config from './config';
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: '127.0.0.1',
-      port: 3306,
-      username: 'root',
-      password: 'kirk958617',
-      database: 'nest_template',
-      autoLoadEntities: true,
-      synchronize: true,
-    }),
+    TypeOrmModule.forRoot(config.database),
     ArticleModule,
     UserModule,
     ProfileModule,

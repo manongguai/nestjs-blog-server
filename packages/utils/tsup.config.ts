@@ -3,7 +3,7 @@ import { defineConfig } from "tsup";
 export default defineConfig(() => {
   return {
     // 入口文件
-    entry: ["index.ts"],
+    entry: ["src/index.ts"],
     // 是否生成对应的调试源文件
     sourcemap: false,
     // 打包之前是否先清空dist文件

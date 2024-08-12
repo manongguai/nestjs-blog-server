@@ -112,7 +112,7 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0
 
-  apps/core:
+  apps/server:
     dependencies:
       '@nestjs/common':
         specifier: ^9.0.0

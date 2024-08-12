@@ -1,5 +1,8 @@
+import database from './database';
+
 export const SECRET = 'secret-key';
 
 export default {
-  Port: 3000,
+  port: 3000,
+  database,
 };

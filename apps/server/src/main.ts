@@ -11,9 +11,8 @@ import * as utils from '@kirkw/server-utils';
 import * as fs from 'fs';
 
 // 全局使用异常过滤器
-const port = config.Port || 3000;
+const port = config.port || 3000;
 async function bootstrap() {
-  console.log(utils, 111);
   const appOptions = { cors: true };
   const app = await NestFactory.create<NestExpressApplication>(
     AppModule,

@@ -3,7 +3,7 @@
   "globalDotEnv": [".env"],
   "pipeline": {
     "@kirkw/server#start:dev": {
-      "dependsOn": [""],
+      "dependsOn": [],
       "outputs": ["dist/**"],
       "dotEnv": [".env.development.local", ".env.development", ".env.local", ".env"]
     },
@@ -34,6 +34,9 @@
     },
     "build": {
       "dependsOn": ["@kirkw/server#build"]
+    },
+    "start": {
+      "dependsOn": ["@kirkw/server#start:prod"]
     }
   }
 }

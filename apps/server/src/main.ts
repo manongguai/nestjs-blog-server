@@ -23,7 +23,7 @@ async function bootstrap() {
     prefix: '/kirk',
   });
   // 全局管道
-  // app.useGlobalPipes(new ValidationPipe());
+  app.useGlobalPipes(new ValidationPipe());
   // 异常处理
   // app.useGlobalFilters(new HttpExceptionFilter());
   // 响应拦截器

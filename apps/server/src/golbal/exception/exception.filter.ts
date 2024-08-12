@@ -18,11 +18,12 @@ export class HttpExceptionFilter implements ExceptionFilter {
     const response = ctx.getResponse<Response>();
     const request = ctx.getRequest<Request>();
     const status = exception.getStatus();
+    const message = getMessage(exception);
     this.logger.error(
       'Error',
       {
         statusCode: status,
-        message: exception.message,
+        message,
       },
       request,
     );
@@ -32,9 +33,15 @@ export class HttpExceptionFilter implements ExceptionFilter {
     response.status(status).json({
       statusCode: status,
       success: false,
-      message: exception.message,
+      message,
       timestamp: new Date().toISOString(),
       path: request.url,
     });
   }
+}
+
+function getMessage(exception: HttpException): string {
+  const response = exception.getResponse();
+  const message = typeof response === 'string' ? response : response['message'];
+  return message || exception.message;
 }

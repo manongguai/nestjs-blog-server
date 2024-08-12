@@ -37,7 +37,6 @@ export class UserController {
     return await this.userService.update(userId, userData);
   }
 
-  @UsePipes(new ValidationPipe())
   @Post('users')
   async create(@Body() userData: CreateUserDto) {
     return this.userService.create(userData);
@@ -48,7 +47,6 @@ export class UserController {
     return await this.userService.delete(params.slug);
   }
 
-  @UsePipes(new ValidationPipe())
   @Post('users/login')
   async login(@Body('user') loginUserDto: LoginUserDto): Promise<UserRO> {
     console.log(loginUserDto);

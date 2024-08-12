@@ -48,7 +48,7 @@ export class UserService {
     if (user) {
       const errors = { username: 'Username and email must be unique.' };
       throw new HttpException(
-        { message: 'Input data validation failed', errors },
+        { message: 'Username and email must be unique', errors },
         HttpStatus.BAD_REQUEST,
       );
     }

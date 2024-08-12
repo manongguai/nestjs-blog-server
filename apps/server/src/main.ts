@@ -7,10 +7,13 @@ import config from './config/index';
 import { HttpExceptionFilter } from './golbal/exception/exception.filter';
 import { ResponseInterceptor } from './golbal/interecptor/response.interceptor';
 import { ValidationPipe } from '@nestjs/common/pipes/validation.pipe';
+import * as utils from '@kirkw/server-utils';
 import * as fs from 'fs';
+
 // 全局使用异常过滤器
 const port = config.Port || 3000;
 async function bootstrap() {
+  console.log(utils, 111);
   const appOptions = { cors: true };
   const app = await NestFactory.create<NestExpressApplication>(
     AppModule,

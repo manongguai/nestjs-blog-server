@@ -1,16 +1,14 @@
-# Carol-UI
+# IM
 
 ### 介绍 📖
 
-Vue3通用组件库（持续迭代中，欢迎参与贡献）
+基于NestJs+Monorepo 的 IM服务
 
 ### 一、在线文档
 
-- Link：http://carol.kirk.wang
 
 ### 二、Git 仓库地址 (欢迎 Star⭐)
 
-- GitHub：https://github.com/manongguai/carol-ui
 
 ### 三、🔨🔨🔨 项目功能
 
@@ -21,48 +19,36 @@ Vue3通用组件库（持续迭代中，欢迎参与贡献）
 - **安装：**
 
 ```js
-npm i @kirkw/carol-ui
+
 
 ```
 
 - **使用：**
 
 ```js
-import CarolUI from "@kirkw/carol-ui";
 
-import "@kirkw/carol-ui/style.css";
-
-Vue.use(CarolUI);
 ```
 
 ### 五、主要文件资源目录 📚
 
 ```text
-carol-ui
+IM
 .
 ├── README.md
 ├── apps
+│   ├── server  // 核心代码
 ├── commitlint.config.js
-├── icons
 ├── lint-staged.config.js
 ├── package.json
 ├── packages
-│   ├── carol-ui  // 组件库核心代码
-│   ├── carol-ui-docs // 文档
 │   ├── tsconfig   // 通用tsconfig
 │   ├── utils  // 通用工具函数
-│   └── viteconfig // 通用viteconfig
 ├── pnpm-lock.yaml
 ├── pnpm-workspace.yaml
+├── .env //环境变量
 ├── turbo
 │   └── generators
-│       ├── config.ts
-│       └── react-component
-│           └── component.hbs
 ├── turbo.json  // turborepo 脚本
-├── types
-│   ├── global.d.ts
-│   └── vue.d.ts
 └── watermark.png
 ```
 
@@ -82,29 +68,6 @@ carol-ui
  pnpm build
 ```
 
-- **文档调试：**
-
-```javascript
- pnpm docs:dev
-```
-
-- **文档打包：**
-
-```javascript
-docs: build;
-```
-
-- **创建新组件：**
-
-```javascript
- pnpm new
-```
-
-- **更新组件导入关系：**
-
-```javascript
- pnpm register
-```
 
 - **test：**
 

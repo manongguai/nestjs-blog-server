@@ -51,8 +51,7 @@
     "stylelint-prettier": "^5.0.0",
     "turbo": "1.12.5",
     "typescript": "^5.2.2",
-    "uppercamelcase": "^3.0.0",
-    "@types/node": "18.11.18"
+    "uppercamelcase": "^3.0.0"
   },
   "packageManager": "pnpm@8.15.4",
   "engines": {

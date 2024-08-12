@@ -7,7 +7,7 @@ export default class WinstonMiddleware implements NestMiddleware {
   constructor(private readonly logger: winstonLoggerService) {}
   use(req: Request, res: Response, next: NextFunction) {
     // 记录日志
-    this.logger.info('Request');
+    this.logger.info('Request', undefined, req);
     next();
   }
 }

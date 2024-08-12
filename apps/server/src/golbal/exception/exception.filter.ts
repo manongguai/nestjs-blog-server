@@ -9,6 +9,7 @@ import {
 import { Request, Response } from 'express';
 import { WINSTON_MODULE_PROVIDER } from 'nest-winston';
 import { winstonLoggerService } from '@/winstonLogger/winstonLogger.service';
+import { REQUEST } from '@nestjs/core';
 @Catch(HttpException)
 export class HttpExceptionFilter implements ExceptionFilter {
   constructor(private readonly logger: winstonLoggerService) {}
@@ -17,10 +18,14 @@ export class HttpExceptionFilter implements ExceptionFilter {
     const response = ctx.getResponse<Response>();
     const request = ctx.getRequest<Request>();
     const status = exception.getStatus();
-    this.logger.error('Error', {
-      statusCode: status,
-      message: exception.message,
-    });
+    this.logger.error(
+      'Error',
+      {
+        statusCode: status,
+        message: exception.message,
+      },
+      request,
+    );
     // console.log(this.logger2);
 
     // this.logger2.error('Error2')
